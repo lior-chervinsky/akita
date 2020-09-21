@@ -28,7 +28,7 @@ export class TodosStore extends EntityStore<TodosState> {
   }
   
   updateFilter(filter: VISIBILITY_FILTER) {
-    this.update({ ui: { filter } } )
+    this.update(({ui}) => ({ ui: { ...ui, filter } } ))
   }
 }
 ```
